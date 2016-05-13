@@ -1,18 +1,16 @@
-package ua.net.itlabs;
+package ua.net.itlabs.SearchTest;
 
 import com.codeborne.selenide.*;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.*;
 import static org.junit.Assert.assertEquals;
 
 public class GoogleSearchTest {
-    
+
     @Test
     public void testSearchAndFollowLink() {
         open("http://google.com/ncr");
