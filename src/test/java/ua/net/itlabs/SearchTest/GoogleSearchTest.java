@@ -14,7 +14,7 @@ public class GoogleSearchTest {
     @Test
     public void testSearchAndFollowLink() {
         open("http://google.com/ncr");
-        startSearch("Selenium automates browsers").pressEnter();
+        search("Selenium automates browsers");
         searchResults.shouldHaveSize(10);
         searchResults.first().shouldHave(text("Selenium automates browsers"));
         followNthLink(0);
@@ -24,8 +24,8 @@ public class GoogleSearchTest {
 
     ElementsCollection searchResults = $$(".srg>.g");
 
-    public SelenideElement startSearch(String text) {
-        return $(By.name("q")).setValue(text);
+    public void search(String text) {
+        $(By.name("q")).setValue(text).pressEnter();
     }
 
     public void followNthLink(int index) {
