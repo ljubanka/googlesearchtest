@@ -14,6 +14,6 @@ public class Menu {
     }
 
     public static void goToInbox() {
-        $("[title~=\"Inbox\"]").click();
+        $("[title~='Inbox']").click();
     }
 }

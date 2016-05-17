@@ -1,4 +1,4 @@
-package ua.net.itlabs;
+package ua.net.itlabs.gmailtest;
 
 import com.codeborne.selenide.*;
 import org.junit.BeforeClass;
@@ -7,6 +7,8 @@ import ua.net.itlabs.pages.Gmail;
 import ua.net.itlabs.pages.Mails;
 import ua.net.itlabs.pages.Menu;
 import ua.net.itlabs.testdata.LoginData;
+
+import static ua.net.itlabs.Helpers.*;
 
 public class GMailTest {
 
@@ -20,7 +22,7 @@ public class GMailTest {
         Gmail.vizit();
         Gmail.logIn(LoginData.email, LoginData.password);
 
-        String subject  = Helpers.getUniqueText("Autotest email ");
+        String subject  = getUniqueText("Autotest email ");
         Mails.send(LoginData.email, subject);
         Menu.refresh();
         Mails.assertMail(0, subject);

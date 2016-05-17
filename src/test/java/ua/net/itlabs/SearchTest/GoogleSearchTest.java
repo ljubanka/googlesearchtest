@@ -1,4 +1,4 @@
-package ua.net.itlabs.SearchTest;
+package ua.net.itlabs.searchtest;
 
 import com.codeborne.selenide.*;
 import org.junit.Test;

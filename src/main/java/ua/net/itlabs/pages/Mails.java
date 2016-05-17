@@ -34,5 +34,5 @@ public class Mails {
         $(byName("q")).setValue("subject: " + text).pressEnter();
     }
 
-    public static ElementsCollection emails = $$("[role=\"main\"] .zA");
+    public static ElementsCollection emails = $$("[role='main'] .zA");
 }
